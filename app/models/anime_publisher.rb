@@ -1,0 +1,2 @@
+class AnimePublisher < ApplicationRecord
+end

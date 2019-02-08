@@ -1,0 +1,2 @@
+class StudioVoiceActor < ApplicationRecord
+end

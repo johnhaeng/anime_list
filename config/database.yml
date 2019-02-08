@@ -82,4 +82,4 @@ production:
   <<: *default
   database: anime_list_production
   username: anime_list
-  password: <%= ENV['ANIME_LIST_DATABASE_PASSWORD'] %>
+  password: cupcakes

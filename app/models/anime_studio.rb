@@ -1,0 +1,2 @@
+class AnimeStudio < ApplicationRecord
+end

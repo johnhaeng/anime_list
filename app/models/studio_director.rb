@@ -1,0 +1,2 @@
+class StudioDirector < ApplicationRecord
+end
