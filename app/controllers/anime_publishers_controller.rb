@@ -1,0 +1,3 @@
+class AnimePublishersController < ApplicationController
+
+end
