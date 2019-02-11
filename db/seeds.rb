@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# require "graphql-request"
+require 'dotenv/load'
+require 'unirest'
+require 'nokogiri'
+
+
+response = Unirest.get "https://www.animenewsnetwork.com/encyclopedia/reports.xml?id=155&type=anime&nlist=all"
+puts response.body
