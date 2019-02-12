@@ -1,9 +1,12 @@
 <h2> All Users </h2>
 
 <%@users.each do |user| %>
-<%= user.name %>
-<%= user.age %>
-<%= user.gender %>
-<%= user.picture_url %>
-
+  User: <%= link_to user.name, user_path(user) %> <br>
+  Age: <%= user.age %> <br>
+  Gender: <%= user.gender %> <br>
+  Email: <%= user.email %><br>
+  Anime: <% user.animes.each do |anime| %>
+  <%= link_to anime.title, anime_path(anime) %>
+  <br>
+  <%end %><br>
 <%end  %>

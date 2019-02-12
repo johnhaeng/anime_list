@@ -1,0 +1,8 @@
+<h2> Purchase a New Anime </h2>
+
+<%= form_for @anime_user do |f| %>
+<%= f.label :user_id %> <br>
+<%= f.collection_select :user_id, User.all, :id, :name %> <br>
+<%= f.collection_select :anime_id, Anime.all, :id, :title %> <br>
+<%= f.submit %>
+<%end %>

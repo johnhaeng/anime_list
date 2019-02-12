@@ -1,6 +1,10 @@
 <h2> All Studios </h2>
 
 <%@studios.each do |studio| %>
-<%= studio.name %>
-<%= studio.logo_url %>
+<label>
+  <li>
+    Name: <%= link_to studio.name, studio_path(studio) %><br>
+    Logo: <%= studio.logo_url %><br>
+  </li>
+</label>
 <%end  %>

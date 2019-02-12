@@ -1,8 +1,13 @@
 <h2> All Animes </h2>
 
+
 <%@animes.each do |anime| %>
-<%= anime.title %>
-<%= anime.episode %>
-<%= anime.season %>
-<%= anime.release_date %>
+<li>
+Title: <%= link_to anime.title, anime_path(anime) %> <br>
+Episode:<%= anime.episodes %><br>
+Season: <%= anime.seasons %><br>
+Summary: <%= anime.summary %><br>
+Running Time: <%= anime.episode_duration %><br>
+Release_date: <%= anime.release_date %><br>
+</li>
 <%end  %>
