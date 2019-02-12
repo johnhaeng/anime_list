@@ -1,0 +1,11 @@
+<h2> User Information </h2>
+
+Name: <%= @user.name %><br>
+Age: <%= @user.age %><br>
+Gender:<%= @user.gender %><br>
+Email: <%= @user.email %><br>
+Anime: <% @user.animes.each do |anime|%>
+  <%= anime.title %><br>
+  <%= anime.seasons%>,
+  <%= anime.episodes %><br>
+<%end %>
