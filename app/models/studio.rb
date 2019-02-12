@@ -1,8 +1,7 @@
 class Studio < ApplicationRecord
-  has_many :studio_voice_actors
-  has_many :anime_studios
-  has_many :studio_directors
-  has_many :animes, through: :anime_studios
-  has_many :directors, through: :studio_directors
-  has_many :voice_actors, through: :studio_voice_actors
+  has_many :animes
+  has_many :publishers, through: :animes
+  has_many :studio, through: :animes
+  has_many :directors, through: :animes
+  has_many :voice_actors, through: :animes
 end

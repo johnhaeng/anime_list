@@ -10,24 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_08_214953) do
+ActiveRecord::Schema.define(version: 2019_02_12_182242) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "anime_publishers", force: :cascade do |t|
-    t.integer "anime_id"
-    t.integer "publisher_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "anime_studios", force: :cascade do |t|
-    t.integer "anime_id"
-    t.integer "studio_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "anime_users", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -36,9 +22,11 @@ ActiveRecord::Schema.define(version: 2019_02_08_214953) do
 
   create_table "animes", force: :cascade do |t|
     t.string "title"
-    t.string "episode"
-    t.string "season"
-    t.integer "release_date"
+    t.string "summary"
+    t.integer "episodes"
+    t.integer "seasons"
+    t.integer "episode_duration"
+    t.date "release_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -52,23 +40,22 @@ ActiveRecord::Schema.define(version: 2019_02_08_214953) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "genre_animes", force: :cascade do |t|
+    t.integer "anime_id"
+    t.integer "genre_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "publishers", force: :cascade do |t|
     t.string "name"
     t.string "logo_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "studio_directors", force: :cascade do |t|
-    t.integer "studio_id"
-    t.integer "director_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "studio_voice_actors", force: :cascade do |t|
-    t.integer "studio_id"
-    t.integer "voice_actor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -91,9 +78,9 @@ ActiveRecord::Schema.define(version: 2019_02_08_214953) do
 
   create_table "voice_actors", force: :cascade do |t|
     t.string "name"
-    t.integer "age"
     t.string "gender"
     t.string "picture_url"
+    t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

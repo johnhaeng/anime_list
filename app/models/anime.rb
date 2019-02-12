@@ -1,8 +1,10 @@
 class Anime < ApplicationRecord
-  has_many :anime_publishers
-  has_many :anime_studios
+  belongs_to :publisher
+  belongs_to :studio
+  belongs_to :director
+  belongs_to :voice_actor
   has_many :anime_users
-  has_many :publishers, through: :anime_publishers
-  has_many :studios, through: :anime_studios
   has_many :users, through: :anime_users
+  has_many :genre_anime
+  has_many :genres, through: :genre_anime
 end

@@ -1,5 +1,5 @@
 class VoiceActor < ApplicationRecord
-  has_many :studio_voice_actors
-  has_many :studios, through: :studio_voice_actors
+  has_many :animes
+  has_many :studios, through: :animes
 
 end
