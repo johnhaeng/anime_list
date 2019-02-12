@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_182242) do
+ActiveRecord::Schema.define(version: 2019_02_12_185835) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,9 @@ ActiveRecord::Schema.define(version: 2019_02_12_182242) do
     t.date "release_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "director_id"
+    t.integer "studio_id"
+    t.integer "publisher_id"
   end
 
   create_table "directors", force: :cascade do |t|
@@ -72,6 +75,13 @@ ActiveRecord::Schema.define(version: 2019_02_12_182242) do
     t.integer "age"
     t.string "gender"
     t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "voice_actor_animes", force: :cascade do |t|
+    t.integer "anime_id"
+    t.integer "voice_actor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -38,26 +38,3 @@ require 'nokogiri'
       end
     # ani.save
   end
-
-
-# check = true
-# id = 1
-# while check == true
-#   doc1 = Unirest.get "https://www.animenewsnetwork.com/encyclopedia/api.xml?anime=#{id}"
-#   doc = Nokogiri::XML(doc1.body)
-#   doc.remove_namespaces!
-#   anime = doc.at_xpath('//anime')
-#   # puts anime
-#
-#   anime.xpath('//info').each do |p|
-#     # puts p.at_xpath('//main').content
-#     puts p.content
-#   end
-#   # puts anime.search('info')
-#
-#   # puts "ID   = " + anime.at_xpath('//info').content
-#
-#   # puts "Name = " + anime.at_xpath('name').content
-#   id+= 1
-#   check = false
-# end
