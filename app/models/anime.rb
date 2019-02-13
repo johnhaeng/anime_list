@@ -8,4 +8,9 @@ class Anime < ApplicationRecord
   has_many :users, through: :anime_users
   has_many :genre_anime
   has_many :genres, through: :genre_anime
+
+  def self.search(search)
+    where("title ILIKE ?", "%#{search}%") 
+  end
+
 end

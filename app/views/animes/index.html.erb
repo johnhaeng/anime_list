@@ -6,3 +6,8 @@
 <%= anime.season %>
 <%= anime.release_date %>
 <%end  %>
+
+
+<% if @animes.blank? %>
+  <h4>There are no animes containing the term <%= params[:search] %>.</h4>
+<% end %>

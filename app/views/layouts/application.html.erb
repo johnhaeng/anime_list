@@ -11,5 +11,11 @@
 
   <body>
     <%= yield %>
+
+    <%= form_tag(animes_path, method: :get, id: "search-form") do %>
+      <%= text_field_tag :search, params[:search], "Search Anime" %>
+      <%= submit_tag "Search", :name => nil %>
+    <% end %>
+
   </body>
 </html>
