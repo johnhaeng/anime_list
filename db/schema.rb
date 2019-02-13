@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_12_185835) do
+ActiveRecord::Schema.define(version: 2019_02_12_213636) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2019_02_12_185835) do
   create_table "anime_users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "anime_id"
   end
 
   create_table "animes", force: :cascade do |t|
@@ -31,7 +33,7 @@ ActiveRecord::Schema.define(version: 2019_02_12_185835) do
     t.datetime "updated_at", null: false
     t.integer "director_id"
     t.integer "studio_id"
-    t.integer "publisher_id"
+    t.string "image"
   end
 
   create_table "directors", force: :cascade do |t|
@@ -52,13 +54,6 @@ ActiveRecord::Schema.define(version: 2019_02_12_185835) do
 
   create_table "genres", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "publishers", force: :cascade do |t|
-    t.string "name"
-    t.string "logo_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
