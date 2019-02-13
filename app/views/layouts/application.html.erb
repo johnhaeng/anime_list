@@ -4,16 +4,16 @@
     <title>AnimeList</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <div class="header">
-      <% if session[:user] == nil || session[:user].empty? %>
+      <% if session[:user] == nil %>
       <div class="dropdown">
-        <button class="dropbtn" href="<%=  %>">Log In</button>
+        <a href="/login"><button class="dropbtn">Log In</button></a>
         </div>
       <% else %>
       <div class="dropdown">
@@ -24,13 +24,20 @@
             <a href="#">Account setting</a>
         </div>
       </div>
-        <% end %>
+      <% end %>
         <div class="header-button">
           <button class="dropbtn">Home</button>
         </div>
         <div class="header-button">
           <button class="dropbtn">About</button>
         </div>
+        <div class="search">
+        <%= form_tag(animes_path, method: :get, id: "search-form") do %>
+          <label for="search"> <i class="fas fa-search"></i> </label>
+          <%= text_field_tag :search, params[:search] %>
+          <%= submit_tag "Search", :name => nil %>
+          <% end %>
+          </div>
       </div>
 
       <div class="body">

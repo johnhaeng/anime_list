@@ -5,7 +5,7 @@ Age: <%= @user.age %><br>
 Gender:<%= @user.gender %><br>
 Email: <%= @user.email %><br>
 <br/>
-<%= link_to "Anime Page", user_path(anime)%>
+<%# link_to "Anime Page", user_path(anime)%>
 <br/>
 <br/>
 <%= link_to "Delete User", user_path(@user), method: :delete, data: { confirm: "Do you want to delete the account?"} %>
