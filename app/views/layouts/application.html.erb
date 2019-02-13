@@ -7,18 +7,34 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
   </head>
 
   <body>
-    <div class="header"></div>
+    <div class="header">
+      <% if session[:user] == nil || session[:user].empty? %>
+      <div class="dropdown">
+        <button class="dropbtn" href="<%=  %>">Log In</button>
+        </div>
+      <% else %>
+      <div class="dropdown">
+        <button class="dropbtn" ><%= session[:user] %>Dropdown</button>
+          <div class="dropdown-content">
+            <a href="#">Account</a>
+            <a href="#">Anime List</a>
+            <a href="#">Account setting</a>
+        </div>
+      </div>
+        <% end %>
+        <div class="header-button">
+          <button class="dropbtn">Home</button>
+        </div>
+        <div class="header-button">
+          <button class="dropbtn">About</button>
+        </div>
+      </div>
+
+      <div class="body">
     <%= yield %>
-
-    <%  %>
-    <%= form_tag(animes_path, method: :get, id: "search-form") do %>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil %>
-    <% end %>
-
+    </div>
   </body>
 </html>
