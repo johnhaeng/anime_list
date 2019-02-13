@@ -1,13 +1,16 @@
 <h2> All Animes </h2>
 
+
 <%@animes.each do |anime| %>
-<%= anime.title %> <br />
-<%= anime.episodes %>
-<%= anime.seasons %>
-<%= anime.release_date %>
+  <%= link_to anime.title, anime_path(anime) %> <br>
+  <%if !anime.image.blank? %>
+    <%= image_tag anime.image.split('"')[1] %><br>
+  <% end %><br>
 <%end  %>
 
 
+
+
 <% if @animes.blank? %>
-  <h4>There are no animes containing the term <%= params[:search] %>.</h4>
+  <h5>No animes containing the term <%= params[:search] %>.</h5>
 <% end %>

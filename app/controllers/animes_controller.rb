@@ -9,6 +9,9 @@ class AnimesController < ApplicationController
     end
   end
 
+  def show
+    @anime = Anime.find(params[:id])
+  end
 
 
 end

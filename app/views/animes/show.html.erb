@@ -1,8 +1,28 @@
 <h2> Anime </h2>
 
 <h3>Title: <%= @anime.title %> <br></h3>
-Episode: <%= @anime.episodes %><br>
-Season: <%= @anime.seasons %><br>
-Running Time: <% @anime.episode_duration %><br>
-Release Date: <%= @anime.release_date %><br>
-Summary: <%= @anime.summary %><br>
+<%# no_blanks "Episodes", @anime.episodes %>
+<%# no_blanks "Seasons", @anime.seasons %>
+<%# no_blanks "Running Time", @anime.episode_duration %>
+<%# no_blanks "Release Date", @anime.release_date %>
+<%# no_blanks "Summary", @anime.summary %>
+
+<% if !@anime.episodes.blank? -%>
+ <p>Episodes: <%=h @anime.episodes %></p>
+<% end %>
+
+<% if !@anime.seasons.blank? -%>
+ <p>Seasons: <%=h @anime.seasons %></p>
+<% end %>
+
+<% if !@anime.episode_duration.blank? -%>
+ <p>Running Time(min): <%=h @anime.episode_duration %></p>
+<% end %>
+
+<% if !@anime.release_date.blank? -%>
+ <p>Release Date: <%=h @anime.release_date %></p>
+<% end %>
+
+<% if !@anime.summary.blank? -%>
+ <p>Summary: <%=h @anime.summary %></p>
+<% end %>
