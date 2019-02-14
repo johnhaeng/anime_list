@@ -1,7 +1,8 @@
 class AnimesController < ApplicationController
 
   def index
-    @animes = Anime.all
+    @animes = Anime.all.order(:title).page params[:page]
+    # @animes = Anime.all
     if params[:search]
       @animes = Anime.search(params[:search]).order("created_at DESC")
     else
