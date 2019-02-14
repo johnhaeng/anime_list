@@ -12,4 +12,7 @@ class ApplicationController < ActionController::Base
   def authorized
     redirect_to "/login" unless logged_in?
   end
+  def home
+    render :layout => false
+  end
 end

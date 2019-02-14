@@ -6,5 +6,6 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :age, presence: true
   validates :gender, presence: true
+  validates :username, presence: true
 
 end

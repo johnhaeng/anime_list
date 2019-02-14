@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   post "/login" => "sessions#sign"
   get "/new_account" => "sessions#new"
   post "/new_account" => "sessions#create"
+  get "/home" => "application#home"
 end

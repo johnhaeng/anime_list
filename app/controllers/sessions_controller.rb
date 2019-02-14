@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     @user = User.new
   end
   def login
-    render :login
+    
   end
 
   def sign

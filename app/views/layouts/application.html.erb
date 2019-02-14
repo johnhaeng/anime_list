@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="icon" href="/assets/logo.png">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,7 +18,7 @@
         </div>
       <% else %>
       <div class="dropdown">
-        <button class="dropbtn" ><%= session[:user] %>Dropdown</button>
+        <button class="dropbtn" ><%= User.find_by(id: session[:user]).username %></button>
           <div class="dropdown-content">
             <a href="#">Account</a>
             <a href="#">Anime List</a>
@@ -25,8 +26,11 @@
         </div>
       </div>
       <% end %>
+      <div class="header-button">
+        <a href="/home"><img src="/assets/logo.png" onmouseover="this.src='/assets/logo-hover.png'" onmouseout="this.src='/assets/logo.png'"></img></a>
+      </div>
         <div class="header-button">
-          <button class="dropbtn">Home</button>
+          <button class="dropbtn">Browse</button>
         </div>
         <div class="header-button">
           <button class="dropbtn">About</button>
