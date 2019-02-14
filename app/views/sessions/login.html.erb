@@ -2,6 +2,10 @@
   <li><%= flash[:error] %></li>
 <% end %>
 
+<%# <img class="background_images" src="/assets/project_wall/1.jpg"></img> %>
+<%= image_tag get_random_image, style: 'width:100%; height:100%'%>
+
+
 <div class="login">
   <%= form_tag ({controller: 'sessions', action: 'login', method: 'post'}) do %>
     <div id="email">

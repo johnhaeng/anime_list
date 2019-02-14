@@ -4,11 +4,22 @@ Html, body{
   padding: 0;
 }
 
+.background_images form {
+  width: 100%;
+  length: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+}
+
+
 .login form {
     width: 350px; /* this is needed */
     height: 300px; /* this is needed */
     padding: 10px; /* this is for styling only */
-    background: #eee; /* this is for styling only */
+    background: black; /* this is for styling only */
+    opacity: .80;
 
     position: absolute; /* this is needed */
     margin: auto; /* this is needed */
@@ -16,44 +27,52 @@ Html, body{
     right: 0; /* this is needed */
     top: 0; /* this is needed */
     bottom: 0; /* this is needed */
+    border-radius: 25px
 }
 
 #email {
+  font-size: 18px;
   position:absolute;
-  top:33%;
-  left:36%;
+  top:20.5%;
+  left:30%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:-60px;
+  border-radius: 25px;
+  color: white;
+  font-family: "Arial", "Helvetica", "Sans-serif"
 }
 
 #emailtag {
-  position:absolute;
-  top:29%;
-  left:58%;
+  position: absolute;
+  top:17%;
+  left:50%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:10px;
 }
 
 #password {
+  color: white;
+  font-size: 18px;
   position:absolute;
-  top:42%;
-  left:36%;
+  top:42.5%;
+  left:30%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:-60px;
-
+  border-radius: 25px;
+  font-family: "Arial", "Helvetica", "Sans-serif"
 }
 
 #passwordtag {
   position:absolute;
   top:42%;
-  left:58%;
+  left:50%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:10px;
 }
 
 #login {
   position:absolute;
-  top:50%;
+  top:55%;
   left:36%;
   margin-top:50px; /* this is half the height of your div*/
   margin-left:-60px;
@@ -85,7 +104,7 @@ Html, body{
 
 #login_signup {
   position:absolute;
-  top:50%;
+  top:55%;
   right:36%;
   margin-top:50px; /* this is half the height of your div*/
   margin-right:-60px;
@@ -110,13 +129,16 @@ Html, body{
   background-color: rgba(0, 0, 0, .8);
 }
 
-
+#login_signup{
+  background-color: rgba(0, 0, 0, 0);
+}
 
 .signup form {
     width: 350px; /* this is needed */
     height: 300px; /* this is needed */
     padding: 10px; /* this is for styling only */
-    background: #eee; /* this is for styling only */
+    background: black; /* this is for styling only */
+    opacity: .80;
 
     position: absolute; /* this is needed */
     margin: auto; /* this is needed */
@@ -124,92 +146,148 @@ Html, body{
     right: 0; /* this is needed */
     top: 0; /* this is needed */
     bottom: 0; /* this is needed */
+    border-radius: 25px;
 }
 
 #name {
+  font-size: 17px;
   position:absolute;
-  top:17%;
-  left:38%;
+  top:13%;
+  left:35%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:-60px;
+  color: white;
+  font-family: "Arial", "Helvetica", "Sans-serif"
 }
 
-#nametag {
+#nametag input[type=text] {
   position:absolute;
-  top:17%;
+  top:12%;
   left:39%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:10px;
+  border-radius: 25px;
+  padding: 4px;
+  width: 140px;
 }
 
 #gender {
+  font-size: 17px;
   position:absolute;
-  top:28%;
-  left:38%;
+  top:23%;
+  left:35%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:-60px;
+  color: white;
+  font-family: "Arial", "Helvetica", "Sans-serif"
 }
 
-#gendertag {
+#gendertag input[type=text]  {
   position:absolute;
-  top:28%;
+  top:22%;
   left:39%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:10px;
+  border-radius: 25px;
+  padding: 4px;
+  width: 140px;
 }
 
 #age {
+  font-size: 17px;
   position:absolute;
-  top:39.5%;
-  left:38%;
+  top:32.5%;
+  left:35%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:-60px;
+  color: white;
+  font-family: "Arial", "Helvetica", "Sans-serif"
 }
 
-#agetag {
+#agetag input[type=number]{
   position:absolute;
-  top:39.5%;
+  top:32%;
   left:39%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:10px;
+  border-radius: 25px;
+  padding: 4px;
+  width: 140px;
 }
 
 #email_signup {
+  font-size: 17px;
   position:absolute;
-  top:52%;
-  left:38%;
+  top:43%;
+  left:35%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:-60px;
+  color: white;
+  font-family: "Arial", "Helvetica", "Sans-serif"
 }
 
-#email_signup_tag {
+#email_signup_tag input[type=text] {
   position:absolute;
-  top:51%;
+  top:42%;
   left:39%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:10px;
+  border-radius: 25px;
+  padding: 4px;
+  width: 140px;
+}
+
+#username {
+  font-size: 17px;
+  position:absolute;
+  top:53%;
+  left:35%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:-60px;
+  color: white;
+  font-family: "Arial", "Helvetica", "Sans-serif"
+}
+
+#usernametag input[type=text] {
+  position:absolute;
+  top:52%;
+  left:39%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+  border-radius: 25px;
+  padding: 4px;
+  width: 140px;
 }
 
 #password_signup {
+  font-size: 17px;
+  border-radius: 25px;
   position:absolute;
-  top:62%;
-  left:38%;
+  top:64%;
+  left:35%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:-60px;
+  color: white;
+  font-family: "Arial", "Helvetica", "Sans-serif"
 }
 
-#password_signup_tag {
+#password_signup_tag input[type=password] {
+  border-radius: 25px;
   position:absolute;
-  top:62%;
+  top:63%;
   left:39%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:10px;
+  border-radius: 25px;
+  padding: 4px;
+  width: 140px;
+
 }
 
 #createbutton {
   position:absolute;
   top:80%;
-  left:30%;
+  left:14%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:10px;
 }
@@ -230,5 +308,32 @@ Html, body{
 }
 
 #createbutton input[type=submit]:hover {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+#signup_login {
+  position:absolute;
+  top:80%;
+  right:14%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+}
+
+#signup_login button{
+  color: #B5B4B4;
+  font-size: 13px;
+  margin: 0px;
+  padding: 5px;
+  width: 120px;
+  margin-right: 10px;
+  border-radius: 25px;
+  /* border: none */
+}
+
+#signup_login button:focus {
+  outline:0;
+}
+
+#signup_login button:hover {
   background-color: rgba(0, 0, 0, .8);
 }
