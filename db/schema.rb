@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_14_013356) do
+ActiveRecord::Schema.define(version: 2019_02_14_151924) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 2019_02_14_013356) do
     t.datetime "updated_at", null: false
     t.string "password_digest"
     t.string "username"
+    t.string "img", default: "/assets/default-user.png"
   end
 
   create_table "voice_actor_animes", force: :cascade do |t|
