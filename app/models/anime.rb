@@ -8,7 +8,7 @@ class Anime < ApplicationRecord
   has_many :genre_anime
   has_many :genres, through: :genre_anime
 
-  paginates_per 50
+  # paginates_per 50
 
   def self.search(search)
     where("title ILIKE ?", "%#{search}%")

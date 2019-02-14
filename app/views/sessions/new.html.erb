@@ -1,31 +1,48 @@
 <% if flash[:error] %>
   <li><%= flash[:error] %></li>
 <% end %>
-<div>
-<%= form_tag "/new_account" do %>
-<div>
-  <%= label_tag("name") %>
-  <%= text_field_tag("user[name]") %>
-  </div>
-<div>
-  <div>
-    <%= label_tag("gender") %>
-    <%= text_field_tag("user[gender]") %>
+
+<div class="signup">
+  <%= form_tag "/new_account" do %>
+    <div id="name">
+      <%= label_tag("name") %>
     </div>
-  <div>
-    <%= label_tag("age") %>
-    <%= number_field_tag("user[age]") %>
+    <div id="nametag">
+      <%= text_field_tag("user[name]") %>
     </div>
-  <%= label_tag("email") %>
-  <%= text_field_tag("user[email]") %>
-  </div>
-  <div>
-    <%= label_tag("password") %>
-  <%= password_field_tag("user[password]") %>
-  </div>
-  <div>
-   <%= submit_tag "Create Account"%>
-   </div>
+
+    <div id="gender">
+      <%= label_tag("gender") %>
+    </div>
+    <div id="gendertag">
+      <%= text_field_tag("user[gender]") %>
+    </div>
+
+    <div id="age">
+      <%= label_tag("age") %>
+    </div>
+    <div id="agetag">
+      <%= number_field_tag("user[age]") %>
+    </div>
+
+    <div id="email_signup">
+      <%= label_tag("email") %>
+    </div>
+    <div id="email_signup_tag">
+      <%= text_field_tag("user[email]") %>
+    </div>
+
+    <div id="password_signup">
+      <%= label_tag("password") %>
+    </div>
+    <div id="password_signup_tag">
+      <%= password_field_tag("user[password]") %>
+    </div>
+
+    <div id="createbutton">
+      <%= submit_tag "Create Account"%>
+      <%# submit_tag("Create Account", :style => "width:100px; color:rgb(250, 250, 250); outline:0; background-color:rgba(0, 0, 0, .8); display:flex") %>
+    </div>
 
 <% end %>
 </div>

@@ -1,0 +1,234 @@
+Html, body{
+  background: gainsboro;
+  margin: 0;
+  padding: 0;
+}
+
+.login form {
+    width: 350px; /* this is needed */
+    height: 300px; /* this is needed */
+    padding: 10px; /* this is for styling only */
+    background: #eee; /* this is for styling only */
+
+    position: absolute; /* this is needed */
+    margin: auto; /* this is needed */
+    left: 0; /* this is needed */
+    right: 0; /* this is needed */
+    top: 0; /* this is needed */
+    bottom: 0; /* this is needed */
+}
+
+#email {
+  position:absolute;
+  top:33%;
+  left:36%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:-60px;
+}
+
+#emailtag {
+  position:absolute;
+  top:29%;
+  left:58%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+}
+
+#password {
+  position:absolute;
+  top:42%;
+  left:36%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:-60px;
+
+}
+
+#passwordtag {
+  position:absolute;
+  top:42%;
+  left:58%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+}
+
+#login {
+  position:absolute;
+  top:50%;
+  left:36%;
+  margin-top:50px; /* this is half the height of your div*/
+  margin-left:-60px;
+}
+
+#login input[type=submit]{
+  color: #B5B4B4;
+  font-size: 13px;
+  margin: 0px;
+  padding: 5px;
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 25px;
+  /* border: none */
+}
+
+#login input[type=submit]:focus {
+  outline:0;
+}
+
+#login input[type=submit]:hover {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+#login{
+  background-color: rgba(0, 0, 0, 0);
+}
+
+
+#login_signup {
+  position:absolute;
+  top:50%;
+  right:36%;
+  margin-top:50px; /* this is half the height of your div*/
+  margin-right:-60px;
+}
+
+#login_signup button{
+  color: #B5B4B4;
+  font-size: 13px;
+  margin: 0px;
+  padding: 5px;
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 25px;
+  /* border: none */
+}
+
+#login_signup button:focus {
+  outline:0;
+}
+
+#login_signup button:hover {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+
+
+.signup form {
+    width: 350px; /* this is needed */
+    height: 300px; /* this is needed */
+    padding: 10px; /* this is for styling only */
+    background: #eee; /* this is for styling only */
+
+    position: absolute; /* this is needed */
+    margin: auto; /* this is needed */
+    left: 0; /* this is needed */
+    right: 0; /* this is needed */
+    top: 0; /* this is needed */
+    bottom: 0; /* this is needed */
+}
+
+#name {
+  position:absolute;
+  top:17%;
+  left:38%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:-60px;
+}
+
+#nametag {
+  position:absolute;
+  top:17%;
+  left:39%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+}
+
+#gender {
+  position:absolute;
+  top:28%;
+  left:38%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:-60px;
+}
+
+#gendertag {
+  position:absolute;
+  top:28%;
+  left:39%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+}
+
+#age {
+  position:absolute;
+  top:39.5%;
+  left:38%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:-60px;
+}
+
+#agetag {
+  position:absolute;
+  top:39.5%;
+  left:39%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+}
+
+#email_signup {
+  position:absolute;
+  top:52%;
+  left:38%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:-60px;
+}
+
+#email_signup_tag {
+  position:absolute;
+  top:51%;
+  left:39%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+}
+
+#password_signup {
+  position:absolute;
+  top:62%;
+  left:38%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:-60px;
+}
+
+#password_signup_tag {
+  position:absolute;
+  top:62%;
+  left:39%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+}
+
+#createbutton {
+  position:absolute;
+  top:80%;
+  left:30%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+}
+
+#createbutton input[type=submit]{
+  color: #B5B4B4;
+  font-size: 13px;
+  margin: 0px;
+  padding: 5px;
+  width: 120px;
+  margin-right: 10px;
+  border-radius: 25px;
+  /* border: none */
+}
+
+#createbutton input[type=submit]:focus {
+  outline:0;
+}
+
+#createbutton input[type=submit]:hover {
+  background-color: rgba(0, 0, 0, .8);
+}

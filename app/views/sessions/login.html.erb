@@ -1,19 +1,29 @@
 <% if flash[:error] %>
   <li><%= flash[:error] %></li>
 <% end %>
-<div>
-<%= form_tag ({controller: 'sessions', action: 'login', method: 'post'}) do %>
-<div>
-  <%= label_tag :email %>
-  <%= text_field_tag :email %>
-  </div>
-  <div>
-    <%= label_tag :password %>
-  <%= password_field_tag :password %>
-  </div>
-  <div>
-   <%= submit_tag "Log In"%>
-   </div>
 
+<div class="login">
+  <%= form_tag ({controller: 'sessions', action: 'login', method: 'post'}) do %>
+    <div id="email">
+      <%= label_tag :email %>
+    </div>
+    <div id="emailtag">
+      <%= text_field_tag :email %><br><br>
+    </div>
+  <%# <div id="password"> %>
+    <div id="password">
+      <%= label_tag :password %>
+    </div>
+    <div id="passwordtag">
+      <%= password_field_tag :password %>
+    </div>
+  <%# <div id="buttons"> %>
+    <div id="login">
+      <%= submit_tag "Log In"%>
+    </div>
+    <div id="login_signup">
+      <%= link_to '<button type="button">Sign Up</button>'.html_safe, new_account_path %>
+    </div>
+  </div>
 <% end %>
 </div>
