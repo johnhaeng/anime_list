@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="icon" href="/assets/logo.png">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<<<<<<< HEAD
     <%= stylesheet_link_tag    'sessions', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+=======
+    <%= stylesheet_link_tag    'user', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'sessions', media: 'all', 'data-turbolinks-track': 'reload' %>
+>>>>>>> jesus
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -20,11 +25,12 @@
         </div>
       <% else %>
       <div class="dropdown">
-        <button class="dropbtn" ><%= User.find_by(id: session[:user]).username %></button>
+        <a href="/users/<%= session[:user] %>"><button class="dropbtn" ><%= User.find_by(id: session[:user]).username %></button></a>
           <div class="dropdown-content">
-            <a href="#">Account</a>
-            <a href="#">Anime List</a>
-            <a href="#">Account setting</a>
+            <a href="/users/<%= session[:user] %>">Account</a>
+            <a href="/users/<%= session[:user] %>">Anime List</a>
+            <a href="/users/<%= session[:user] %>">Account setting</a>
+            <a href="/log_out">Log Out</a>
         </div>
       </div>
       <% end %>
@@ -32,10 +38,10 @@
         <a href="/home"><img src="/assets/logo.png" onmouseover="this.src='/assets/logo-hover.png'" onmouseout="this.src='/assets/logo.png'"></img></a>
       </div>
         <div class="header-button">
-          <button class="dropbtn">Browse</button>
+          <a href="/animes"><button class="dropbtn">Browse</button></a>
         </div>
         <div class="header-button">
-          <button class="dropbtn">About</button>
+          <a href=""><button class="dropbtn">About</button></a>
         </div>
         <div class="search">
         <%= form_tag(animes_path, method: :get, id: "search-form") do %>
@@ -44,6 +50,8 @@
           <%= submit_tag "Search", :name => nil %>
           <% end %>
           </div>
+      </div>
+      <div class="info-tag">
       </div>
 
       <div class="body">

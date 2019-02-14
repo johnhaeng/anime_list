@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     @user = User.new
   end
   def login
-    
+
   end
 
   def sign
@@ -30,6 +30,10 @@ class SessionsController < ApplicationController
       flash[:error] = "INVALID LOGIN"
       render :new
     end
+  end
+  def logout
+    session[:user] = nil
+    redirect_to "/home"
   end
 
   private

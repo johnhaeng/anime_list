@@ -1,7 +1,11 @@
+h2 {
+  color: #0d54f9;
+}
 body{
  padding:0px;
  margin:0px;
  margin-top: 0px;
+ background-color: rgb(240, 240, 250);
 }
 .banner{
   margin: 0px;
@@ -70,6 +74,7 @@ body{
  }
  .menu button:hover {
    background-color: rgba(0, 0, 0, .8);
+   cursor: pointer;
  }
  .login{
    background-color: rgba(0, 0, 0, 0);

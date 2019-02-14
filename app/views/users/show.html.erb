@@ -1,11 +1,45 @@
-<h2> User Information </h2>
-
-Name: <%= @user.name %><br>
-Age: <%= @user.age %><br>
-Gender:<%= @user.gender %><br>
-Email: <%= @user.email %><br>
-<br/>
-<%# link_to "Anime Page", user_path(anime)%>
-<br/>
-<br/>
-<%= link_to "Delete User", user_path(@user), method: :delete, data: { confirm: "Do you want to delete the account?"} %>
+<div class="body-main-wrapper">
+  <div class="upper-wrapper">
+    <div class="wrapper">
+      <div class="user-img">
+        <img src="<%= @user.img %>"></img>
+      </div>
+      <div class="info">
+        <h2> <%= @user.username.capitalize %> </h2>
+        <p>Name: <%= @user.name.capitalize %></p>
+        <p>Age: <%= @user.age %></p>
+        <p>Gender: <%= @user.gender.capitalize %></p>
+        <p>Email: <%= @user.email %></p>
+        <a data-confirm="Do you want to delete the account?" rel="nofollow" data-method="delete" href="/users/2">
+          Delete User
+        </a>
+      </div>
+    </div>
+    <div class="favorites-wrapper">
+      <h2>Favorites</h2>
+      <div class="favorites">
+        <% check = true, checker = 0 %>
+        <% @user.anime_users.each do |a|%>
+        <% if a.favorite %>
+        <% anime = Anime.find_by(id: a.anime_id) %>
+          <div class="card"><p><%= anime.title %></p><br />
+            <% if !anime.image.blank? %>
+          <img src="<%= anime.image.split('"')[1] %>"> </img>
+          <% else %>
+          <img src="/assets/no_img.png"></img>
+          <% end %>
+        </div>
+          <% check = false %>
+          <% checker += 1 %>
+          <% if checker > 3 %>
+            <% break %>
+          <% end %>
+          <% end %>
+          <% end %>
+          <% if check %>
+           <p>Please favorite an anime so you can keep track of them</p>
+           <% end %>
+      </div>
+    </div>
+  </div>
+</div>

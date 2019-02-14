@@ -1,0 +1,11 @@
+<div class="body-main-wrapper">
+  <div class="upper-wrapper">
+
+    <%@animes.each do |anime| %>
+      <%= link_to anime.title, anime_path(anime) %> <br>
+      <%if !anime.image.blank? %>
+        <%= image_tag anime.image.split('"')[1] %><br>
+      <% end %><br>
+    <%end  %>
+  </div>
+</div>
