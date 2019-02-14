@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   resources :directors, only: [:index, :show]
   resources :publishers, only: [:index, :show]
   resources :studios, only: [:index, :show]
-  resources :users
+  resources :users, only: [:show, :edit]
   resources :voice_actors, only: [:index, :show]
+  get "/login" => "sessions#login"
+  post "/login" => "sessions#sign"
+  get "/new_account" => "sessions#new"
+  post "/new_account" => "sessions#create"
+  get "/home" => "application#home"
 end

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AnimeList</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="icon" href="/assets/logo.png">
+    <%# stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+<div class="banner">
+<img class="banner-img" src="/assets/thumb-1920-856712.jpg"></img>
+<div class="layer">
+  <div class="wrapper">
+  <div class="logo">
+  <img class="logo-img" src="/assets/logo2.png" ></img>
+  </div>
+    <div class="menu">
+      <a class="font-a" href="/animes">Browse</a>
+      <a class="font-a">About</a>
+      <a href="/login"><button class="login">Log In</button></a>
+      <a href="/new_account"><button class="signup">Sign Up</button></a>
+    </div>
+  </div>
+</div>
+</div>
+
+</body>

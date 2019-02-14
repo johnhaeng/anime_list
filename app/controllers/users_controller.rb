@@ -1,16 +1,11 @@
 class UsersController < ApplicationController
-
+  before_action :authorized
   def show
-    @user = User.find(params[:id])
-  end
-
-  def new
-    @user = User.new
-  end
-
-  def create
-    user = User.create(user_params)
-    redirect_to user_path(user)
+    unless session[:user].nil?
+      @user = User.find(session[:user])
+    else
+      redirect_to "/login"
+    end
   end
 
   def edit
