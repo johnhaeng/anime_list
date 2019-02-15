@@ -34,7 +34,7 @@ Html, body{
   font-size: 18px;
   position:absolute;
   top:20.5%;
-  left:30%;
+  left:28%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:-60px;
   border-radius: 25px;
@@ -55,7 +55,7 @@ Html, body{
   font-size: 18px;
   position:absolute;
   top:42.5%;
-  left:30%;
+  left:28%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:-60px;
   border-radius: 25px;
@@ -73,7 +73,7 @@ Html, body{
 #login {
   position:absolute;
   top:55%;
-  left:36%;
+  left:37%;
   margin-top:50px; /* this is half the height of your div*/
   margin-left:-60px;
 }
@@ -105,7 +105,7 @@ Html, body{
 #login_signup {
   position:absolute;
   top:55%;
-  right:36%;
+  right:35%;
   margin-top:50px; /* this is half the height of your div*/
   margin-right:-60px;
 }
