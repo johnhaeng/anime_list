@@ -150,3 +150,69 @@
   background-color: #0d54f9;
   color: rgb(250, 250, 250);
 }
+
+.show_page {
+  font-family: "Arial", "Helvetica", "Sans-serif";
+}
+
+.show_page #title {
+  font-size: 22.5px;
+  color: blue;
+  position:absolute;
+  top:19.5%;
+  left:16%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+  width: 100%;
+}
+
+.show_page #image {
+  position:absolute;
+  top:30.6%;
+  left:17%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+  /* height: 200px; */
+}
+
+.show_page #episodes {
+  position:absolute;
+  top:37.5%;
+  left:42%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+}
+
+.show_page #running_time {
+  position:absolute;
+  top:45%;
+  left:42%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+}
+
+.show_page #seasons {
+  position:absolute;
+  top:40%;
+  left:63%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+}
+
+.show_page #release_date {
+  position:absolute;
+  top:47%;
+  left:63%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+}
+
+.show_page #summary {
+  position:absolute;
+  top:62.5%;
+  left:16%;
+  margin-top:10; /* this is half the height of your div*/
+  margin-left:10px;
+  max-width: 68%;
+  max-height: 100%;
+}
