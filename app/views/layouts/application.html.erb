@@ -7,13 +7,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="icon" href="/assets/logo.png">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<<<<<<< HEAD
-    <%= stylesheet_link_tag    'sessions', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-=======
     <%= stylesheet_link_tag    'user', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'sessions', media: 'all', 'data-turbolinks-track': 'reload' %>
->>>>>>> jesus
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -28,7 +23,7 @@
         <a href="/users/<%= session[:user] %>"><button class="dropbtn" ><%= User.find_by(id: session[:user]).username %></button></a>
           <div class="dropdown-content">
             <a href="/users/<%= session[:user] %>">Account</a>
-            <a href="/users/<%= session[:user] %>">Anime List</a>
+            <a href="/list">Anime List</a>
             <a href="/users/<%= session[:user] %>">Account setting</a>
             <a href="/log_out">Log Out</a>
         </div>
@@ -52,6 +47,8 @@
           </div>
       </div>
       <div class="info-tag">
+        <% if !@user.nil? %>
+        <% end %>
       </div>
 
       <div class="body">

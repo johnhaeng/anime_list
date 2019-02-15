@@ -1,24 +1,44 @@
+<div class="body-main-wrapper">
+  <div class="upper-wrapper">
+    <div class="list">
+      <% if @animes.blank? %>
+        <h2>No animes containing the term <%= params[:search] %>.</h2>
+      <% else %>
+      <% count = 1 %>
+    <%@animes.each do |anime| %>
+    <a href="<%= anime_path(anime) %>"><div class="user-anime-wrapper">
+      <div class="count"><%= count %>
+        <% count += 1 %></div>
+      <div>
+        <% if !anime.image.blank? %>
+      <img src="<%= anime.image.split('"')[1] %>"> </img>
+      <% else %>
+      <img src="/assets/no_img.png"></img>
+      <% end %>
+        </div>
+        <div class="title">
+        <%= anime.title%>
+        <div class="des">
+          <% if anime.episodes %>
+            <%= anime.episodes %> Episodes
+          <br />
+          <% end %>
+        <%if anime.episode_duration  %>
+         Run time: <%= anime.episode_duration %>
+        <% end %>
+      </div>
+        </div>
+        <div class="score">
+          <% if !anime.anime_users.empty? %>
 
-<div class="side-options">
-options
+          <% else %>
+            N/A
+          <% end %>
+        </div>
+        </div>
+        </a>
+    <% end  %>
+    <% end %>
+    </div>
+  </div>
 </div>
-<div class="main-body">
-<h2> All Animes </h2>
-
-
-<%@animes.each do |anime| %>
-  <%= link_to anime.title, anime_path(anime) %> <br>
-
-  <%if !anime.image.blank? %>
-    <%= image_tag anime.image.split('"')[1] %><br>
-  <% end %><br>
-<%end  %>
-
-<%#page_entries_info @animes %>
-<%# paginate @animes %>
-
-
-
-<% if @animes.blank? %>
-  <h5>No animes containing the term <%= params[:search] %>.</h5>
-<% end %>
