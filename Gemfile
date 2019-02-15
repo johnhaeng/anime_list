@@ -5,6 +5,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 ruby '2.3.3'
 
+gem 'kaminari'
 gem 'bcrypt'
 gem 'unirest'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

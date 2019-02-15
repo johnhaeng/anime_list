@@ -42,3 +42,24 @@
     </div>
   </div>
 </div>
+<div class="main-body">
+<h2> All Animes </h2>
+
+
+<%@animes.each do |anime| %>
+  <%= link_to anime.title, anime_path(anime) %> <br>
+
+  <%if !anime.image.blank? %>
+    <%= image_tag anime.image.split('"')[1] %><br>
+  <% end %><br>
+<%end  %>
+
+
+<%# paginate @animes %>
+<%# page_entries_info @animes %>
+
+
+
+<% if @animes.blank? %>
+  <h5>No animes containing the term <%= params[:search] %>.</h5>
+<% end %>
