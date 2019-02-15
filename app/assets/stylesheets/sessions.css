@@ -13,8 +13,8 @@
     width: 350px; /* this is needed */
     height: 300px; /* this is needed */
     padding: 10px; /* this is for styling only */
-    background: black; /* this is for styling only */
-    opacity: .80;
+    background-color: rgba(30,30,35);
+    /* opacity: .80; */
 
     position: absolute; /* this is needed */
     margin: auto; /* this is needed */
@@ -118,7 +118,7 @@
     width: 350px; /* this is needed */
     height: 300px; /* this is needed */
     padding: 10px; /* this is for styling only */
-    background: black; /* this is for styling only */
+    background-color: rgba(30,30,35);
     opacity: .80;
 
     position: absolute; /* this is needed */

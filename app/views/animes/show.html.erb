@@ -1,34 +1,64 @@
 <div class="body-main-wrapper">
   <div class="upper-wrapper">
     <div class="wrapper">
-<h2> Anime </h2>
+<!-- <div id="greeting"> <h2> Anime </h2> </div> -->
 
-<h3>Title: <%= @anime.title %> <br></h3>
+<div class="show_page">
+<div id="title"><h3>  <%= @anime.title %> <br></h3></div>
 <%# no_blanks "Episodes", @anime.episodes %>
 <%# no_blanks "Seasons", @anime.seasons %>
 <%# no_blanks "Running Time", @anime.episode_duration %>
 <%# no_blanks "Release Date", @anime.release_date %>
 <%# no_blanks "Summary", @anime.summary %>
 
-<% if !@anime.episodes.blank? -%>
- <p>Episodes: <%=h @anime.episodes %></p>
+<div id="image"><% if !@anime.image.blank? %>
+  <img src="<%= @anime.image.split('"')[1] %>"> </img>
+<% else %>
+  <img src="/assets/no_img.png" height="180" width="180"></img>
 <% end %>
+</div>
 
-<% if !@anime.seasons.blank? -%>
- <p>Seasons: <%=h @anime.seasons %></p>
-<% end %>
+<div id="episodes">
+  <% if !@anime.episodes.blank? -%>
+    <p>Episodes: <%=h @anime.episodes %></p>
+  <%else  %>
+    <%= "Episodes: N/A" %>
+  <% end %>
+</div>
 
-<% if !@anime.episode_duration.blank? -%>
- <p>Running Time(min): <%=h @anime.episode_duration %></p>
-<% end %>
+<div id="seasons">
+  <% if !@anime.seasons.blank? -%>
+    <p>Seasons: <%=h @anime.seasons %></p>
+  <%else  %>
+    <%= "Seasons: N/A" %>
+  <%end %>
+</div>
 
-<% if !@anime.release_date.blank? -%>
- <p>Release Date: <%=h @anime.release_date %></p>
-<% end %>
+<div id="running_time">
+  <% if !@anime.episode_duration.blank? -%>
+    <p>Running Time(min): <%=h @anime.episode_duration %></p>
+  <%else  %>
+    <%= "Running Time: N/A" %>
+  <% end %>
+</div>
 
-<% if !@anime.summary.blank? -%>
- <p>Summary: <%=h @anime.summary %></p>
-<% end %>
+<div id="release_date">
+  <% if !@anime.release_date.blank? -%>
+    <p>Release Date: <%=h @anime.release_date %></p>
+  <%else  %>
+    <%= "Release Date: N/A" %>
+  <% end %>
+</div>
+
+<div id="summary">
+  <% if !@anime.summary.blank? -%>
+    <p>Summary: <%=h @anime.summary %></p>
+  <%else  %>
+    <%= "Summary: N/A" %>
+  <% end %>
+  </div>
+</div>
+</div>
 </div>
 </div>
 </div>
