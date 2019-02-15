@@ -83,7 +83,11 @@
 }
 .user-anime-wrapper img{
   margin-right: 20px;
-  height: 70px;
+  max-height: 70px;
+  max-width: 100px;
+}
+.user-anime-wrapper-picture{
+  width: 120px;
 }
 .list a{
 text-decoration: none;

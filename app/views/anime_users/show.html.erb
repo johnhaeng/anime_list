@@ -7,7 +7,7 @@
 
       <div class="count"><%= count %>
         <% count += 1 %></div>
-      <div>
+      <div class="user-anime-wrapper-picture">
         <% if !anime.image.blank? %>
       <img src="<%= anime.image.split('"')[1] %>"> </img>
       <% else %>
@@ -16,6 +16,22 @@
         </div>
         <div class="title">
         <%= anime.title%>
+        <div class="des">
+          <% if anime.episodes %>
+            <%= anime.episodes %> Episodes
+          <br />
+          <% end %>
+        <%if anime.episode_duration  %>
+         Run time: <%= anime.episode_duration %>
+        <% end %>
+      </div>
+        </div>
+        <div class="score">
+          <% if anime.score != 0 %>
+            <%= anime.score %>
+          <% else %>
+            N/A
+          <% end %>
         </div>
         </div>
         </a>
