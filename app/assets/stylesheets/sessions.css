@@ -42,6 +42,19 @@
   margin-top:10; /* this is half the height of your div*/
   margin-left:10px;
 }
+#emailtag input[type=text]{
+  width: 175px;
+  background-color: rgba(40, 40, 45);
+  color:rgb(250, 250, 250);
+  border: 0px;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 25px;
+  margin-left:-50px;
+}
+#emailtag input[type=text]:focus {
+  outline:0;
+}
 #password {
   color: white;
   font-size: 18px;
@@ -50,7 +63,6 @@
   left:28%;
   margin-top:10; /* this is half the height of your div*/
   margin-left:-60px;
-  border-radius: 25px;
   font-family: "Arial", "Helvetica", "Sans-serif"
 }
 #passwordtag {
@@ -58,7 +70,19 @@
   top:42%;
   left:50%;
   margin-top:10; /* this is half the height of your div*/
-  margin-left:10px;
+}
+#passwordtag input[type=password]{
+  width: 175px;
+  background-color: rgba(40, 40, 45);
+  color:rgb(250, 250, 250);
+  border: 0px;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 25px;
+  margin-left:-40px;
+}
+#passwordtag input[type=password]:focus {
+  outline:0;
 }
 #login {
   position:absolute;

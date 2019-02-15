@@ -1,34 +1,38 @@
 class AnimesController < ApplicationController
   def index
-    @animes = Anime.all
-    # @animes = Anime.page(params[:page]).per(50)
-    # @animes = Anime.order(:title).page(params[:page])
-
-    # @posts = Post.page(params[:page]).per(10)
-
-
-    # @animes = Anime.all
-    if params[:search]
-      @animes = Anime.search(params[:search]).order("created_at DESC")
+    if session[:page].nil?
+      session[:page] = 1
     end
-
-    if params[:sort]
+    @animes = Anime.all
+    if params[:Anime]
       if params[:search]
         @animes = Anime.search(params[:search]).order(params[:sort].to_sym)
       else
-        @animes = Anime.order(params[:sort].to_sym)
+        @genre = Genre.find_by(id: genre[:Genre])
+        @animes = Anime.page(session[:page], genre[:Genre])
       end
-
     else
       if params[:search]
         @animes = Anime.search(params[:search]).order(:title)
       else
-        @animes = Anime.order(:title)
+        @animes = Anime.page(session[:page])
       end
     end
+  end
+  def next
+    session[:page] += 1
+    redirect_to "/animes"
+  end
+  def back
+    session[:page] -= 1
+    redirect_to "/animes"
   end
 
   def show
     @anime = Anime.find(params[:id])
+  end
+  private
+  def genre
+    params.require(:Anime).permit(:Genre)
   end
 end

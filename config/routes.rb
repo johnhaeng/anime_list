@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get "/home" => "application#home"
   get "/list" => "anime_users#show"
   get "/log_out" => "sessions#logout"
+  post "/animes" => "animes#index"
+  get "/animes/next" => "animes#next"
+  get "/animes/back" => "animes#back"
   resources :animes, only: [:index, :show]
   resources :users, only: [:show, :edit]
 end

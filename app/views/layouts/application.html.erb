@@ -49,10 +49,15 @@
           <% end %>
           </div>
       </div>
-      <div class="info-tag">
-        <% if !@user.nil? %>
+      <% if @user.nil? %>
+      <div class="sort-tag">
+        <%= form_tag "/animes" do %>
+          <%= label_tag(:Anime, "Genre:") %> 
+          <%= collection_select(:Anime, :Genre, Genre.all, :id, :name) %>
+          <%= submit_tag "Go" %>
         <% end %>
       </div>
+      <% end %>
 
       <div class="body">
     <%= yield %>
